@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Appointments | Kolleswari Petcare Center</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header class="topbar"><a class="brand" href="/"><span class="brand-mark">✚</span><span>Kolleswari <b>Petcare Center</b><small>Compassionate care for your pets</small></span></a><button class="menu-toggle">☰</button><nav class="nav"><a href="/">Home</a><a href="/owners.html">Owners</a><a href="/pets.html">Pets</a><a class="active" href="/appointments.html">Appointments</a></nav></header>
+<main class="page-wrap">
+  <section class="page-hero"><div><span class="eyebrow">PLAN A HEALTHIER TOMORROW</span><h1>Appointments</h1><p>Book visits, track appointment status and keep care on schedule.</p></div><img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=900" alt="Dog at a veterinary clinic"></section>
+  <div class="mini-gallery"><img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600" alt="Veterinary doctor with dog"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600" alt="Happy dogs"><img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600" alt="Cat"></div>
+  <section class="management-grid">
+    <form id="appointmentForm" class="panel form-panel"><div class="panel-title"><div><span class="eyebrow">VISIT DETAILS</span><h2 id="appointmentFormTitle">Book a visit</h2></div><span class="panel-icon">▦</span></div>
+      <input type="hidden" id="appointment_id"><label>Select pet *</label><select id="appointment_pet" required><option value="">Select registered pet</option></select>
+      <label>Doctor name *</label><select id="doctor_name" required><option value="">Select doctor</option><option>Dr. Kolleswari</option><option>Visiting Veterinarian</option></select>
+      <label>Appointment date *</label><input id="appointment_date" type="date" required>
+      <label>Reason for visit</label><textarea id="appointment_reason" rows="3" maxlength="200" placeholder="Check-up, vaccination, illness..."></textarea>
+      <label>Status</label><select id="appointment_status"><option>Scheduled</option><option>Confirmed</option><option>Completed</option><option>Cancelled</option></select>
+      <div class="form-actions"><button class="btn primary" type="submit" id="appointmentSubmit">Book appointment</button><button class="btn soft" type="button" onclick="resetAppointmentForm()">Clear</button></div><p class="form-message" id="appointmentMessage"></p>
+    </form>
+    <section class="panel table-panel"><div class="panel-title"><div><span class="eyebrow">VISIT SCHEDULE</span><h2>Appointment list</h2></div><span class="count-pill" id="appointmentCount">0 visits</span></div>
+      <input class="search" id="appointmentSearch" placeholder="Search pet, owner, doctor or status..."><div class="table-scroll"><table><thead><tr><th>ID</th><th>Pet / Owner</th><th>Date</th><th>Doctor</th><th>Status</th><th>Actions</th></tr></thead><tbody id="appointmentsTable"><tr><td colspan="6">Loading appointments...</td></tr></tbody></table></div>
+    </section>
+  </section>
+</main><footer><a class="brand footer-brand" href="/">✚ Kolleswari Petcare Center</a><span>Compassionate Care for Your Pets</span><span>© <span id="year"></span> Kolleswari Petcare Center</span></footer><script src="js/common.js"></script><script src="js/appointments.js"></script></body></html>

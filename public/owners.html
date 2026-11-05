@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Owners | Kolleswari Petcare Center</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header class="topbar"><a class="brand" href="/"><span class="brand-mark">✚</span><span>Kolleswari <b>Petcare Center</b><small>Compassionate care for your pets</small></span></a><button class="menu-toggle">☰</button><nav class="nav"><a href="/">Home</a><a class="active" href="/owners.html">Owners</a><a href="/pets.html">Pets</a><a href="/appointments.html">Appointments</a></nav></header>
+<main class="page-wrap">
+  <section class="page-hero"><div><span class="eyebrow">CLIENT DIRECTORY</span><h1>Pet owners</h1><p>Keep owner contact information organised and easy to find.</p></div><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=900" alt="Two happy dogs"></section>
+  <div class="mini-gallery"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600" alt="Golden retriever"><img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600" alt="Dog at veterinary clinic"><img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600" alt="Cat"></div>
+  <section class="management-grid">
+    <form id="ownerForm" class="panel form-panel"><div class="panel-title"><div><span class="eyebrow">OWNER DETAILS</span><h2 id="ownerFormTitle">Add new owner</h2></div><span class="panel-icon">＋</span></div>
+      <input type="hidden" id="owner_id"><label>Owner name *</label><input id="owner_name" required maxlength="100" placeholder="Enter full name">
+      <label>Email address</label><input id="owner_email" type="email" placeholder="name@example.com">
+      <label>Phone number *</label><input id="owner_phone" required type="tel" maxlength="15" placeholder="Enter phone number">
+      <label>Address</label><textarea id="owner_address" rows="3" placeholder="Street, city, state"></textarea>
+      <div class="form-actions"><button class="btn primary" type="submit" id="ownerSubmit">Save owner</button><button class="btn soft" type="button" onclick="resetOwnerForm()">Clear</button></div>
+      <p class="form-message" id="ownerMessage"></p>
+    </form>
+    <section class="panel table-panel"><div class="panel-title"><div><span class="eyebrow">REGISTERED CLIENTS</span><h2>Owner directory</h2></div><span class="count-pill" id="ownerCount">0 owners</span></div>
+      <input class="search" id="ownerSearch" placeholder="Search by name, email or phone..."><div class="table-scroll"><table><thead><tr><th>ID</th><th>Owner</th><th>Phone</th><th>Address</th><th>Actions</th></tr></thead><tbody id="ownersTable"><tr><td colspan="5">Loading owners...</td></tr></tbody></table></div>
+    </section>
+  </section>
+</main><footer><a class="brand footer-brand" href="/">✚ Kolleswari Petcare Center</a><span>Compassionate Care for Your Pets</span><span>© <span id="year"></span> Kolleswari Petcare Center</span></footer><script src="js/common.js"></script><script src="js/owners.js"></script></body></html>

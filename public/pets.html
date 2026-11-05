@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Pets | Kolleswari Petcare Center</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header class="topbar"><a class="brand" href="/"><span class="brand-mark">✚</span><span>Kolleswari <b>Petcare Center</b><small>Compassionate care for your pets</small></span></a><button class="menu-toggle">☰</button><nav class="nav"><a href="/">Home</a><a href="/owners.html">Owners</a><a class="active" href="/pets.html">Pets</a><a href="/appointments.html">Appointments</a></nav></header>
+<main class="page-wrap">
+  <section class="page-hero"><div><span class="eyebrow">LITTLE PAWS, BIG LOVE</span><h1>Pet profiles</h1><p>Register pets and connect every pet to their owner.</p></div><img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=900" alt="Cute dog portrait"></section>
+  <div class="mini-gallery"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600" alt="Dogs together"><img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600" alt="Veterinary care"><img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600" alt="Cat portrait"></div>
+  <section class="management-grid">
+    <form id="petForm" class="panel form-panel"><div class="panel-title"><div><span class="eyebrow">PET INFORMATION</span><h2 id="petFormTitle">Register a pet</h2></div><span class="panel-icon">♡</span></div>
+      <input type="hidden" id="pet_id"><label>Pet owner *</label><select id="pet_owner" required><option value="">Select owner</option></select>
+      <label>Pet name *</label><input id="pet_name" required maxlength="100" placeholder="Enter pet name">
+      <label>Species *</label><select id="pet_species" required><option value="">Choose species</option><option>Dog</option><option>Cat</option><option>Bird</option><option>Rabbit</option><option>Fish</option><option>Other</option></select>
+      <label>Breed</label><select id="pet_breed"><option value="">Select breed (optional)</option><option>Labrador Retriever</option><option>Golden Retriever</option><option>German Shepherd</option><option>Persian</option><option>Indian / Mixed Breed</option><option>Other</option></select>
+      <label>Age (years)</label><input id="pet_age" type="number" min="0" max="99" placeholder="e.g. 2">
+      <div class="form-actions"><button class="btn primary" type="submit" id="petSubmit">Save pet</button><button class="btn soft" type="button" onclick="resetPetForm()">Clear</button></div><p class="form-message" id="petMessage"></p>
+    </form>
+    <section class="panel table-panel"><div class="panel-title"><div><span class="eyebrow">REGISTERED PETS</span><h2>Pet directory</h2></div><span class="count-pill" id="petCount">0 pets</span></div>
+      <input class="search" id="petSearch" placeholder="Search pet, species, breed or owner..."><div class="table-scroll"><table><thead><tr><th>ID</th><th>Pet</th><th>Species / Breed</th><th>Owner</th><th>Age</th><th>Actions</th></tr></thead><tbody id="petsTable"><tr><td colspan="6">Loading pets...</td></tr></tbody></table></div>
+    </section>
+  </section>
+</main><footer><a class="brand footer-brand" href="/">✚ Kolleswari Petcare Center</a><span>Compassionate Care for Your Pets</span><span>© <span id="year"></span> Kolleswari Petcare Center</span></footer><script src="js/common.js"></script><script src="js/pets.js"></script></body></html>
